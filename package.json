@@ -1,0 +1,47 @@
+{
+  "name": "informed-ai",
+  "description": "AI News Aggregator",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "author": "Jeremy Nguyen <hi@jeremy.ng> (https://jeremy.ng)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeremy-code/informed-ai.git"
+  },
+  "homepage": "https://github.com/jeremy-code/informed-ai#readme",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "format": "prettier 'src/**/*.{js,ts,tsx,json}' --write --ignore-path .gitignore",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.0.1",
+    "autoprefixer": "^10.4.14",
+    "clsx": "^2.0.0",
+    "next": "^13.4.12",
+    "next-auth": "^4.22.3",
+    "postcss": "^8.4.27",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss": "^3.3.3"
+  },
+  "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.1.0",
+    "@types/node": "^20.4.7",
+    "@types/react": "^18.2.18",
+    "@types/react-dom": "^18.2.7",
+    "eslint": "^8.46.0",
+    "eslint-config-next": "^13.4.12",
+    "eslint-config-prettier": "^8.10.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "prettier": "^3.0.1",
+    "typescript": "^5.1.6"
+  }
+}
