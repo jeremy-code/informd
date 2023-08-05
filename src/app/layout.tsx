@@ -10,13 +10,13 @@ const outfit = Outfit({ weight: "variable", subsets: ["latin"], variable: "--fon
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://informd.news/"),
-  title: "InformedAI",
-  description: "InformedAI is an AI news aggregator.",
+  title: "informd",
+  description: "informd is an AI news aggregator.",
   authors: {
     name: "Jeremy Nguyen",
     url: "https://jeremy.ng",
   },
-  publisher: "InformedAI",
+  publisher: "informd",
 };
 
 type RootLayoutProps = {

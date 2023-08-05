@@ -1,5 +1,5 @@
 {
-  "name": "informed-ai",
+  "name": "informd",
   "description": "AI News Aggregator",
   "version": "0.0.0",
   "private": true,
@@ -7,9 +7,9 @@
   "author": "Jeremy Nguyen <hi@jeremy.ng> (https://jeremy.ng)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jeremy-code/informed-ai.git"
+    "url": "https://github.com/jeremy-code/informd.git"
   },
-  "homepage": "https://github.com/jeremy-code/informed-ai#readme",
+  "homepage": "https://github.com/jeremy-code/informd#readme",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -28,6 +28,7 @@
     "postcss": "^8.4.27",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "swr": "^2.2.0",
     "tailwind-merge": "^1.14.0",
     "tailwindcss": "^3.3.3"
   },

@@ -6,30 +6,30 @@ import { logo } from "@/assets";
 export const generateImageMetadata = () => {
   return [
     {
+      id: "32",
       contentType: "image/png",
-      size: { width: 48, height: 48 },
-      id: "small",
+      size: { width: 32, height: 32 },
     },
     {
+      id: "192",
       contentType: "image/png",
-      size: { width: 72, height: 72 },
-      id: "medium",
+      size: { width: 192, height: 192 },
     },
     {
+      id: "512",
       contentType: "image/png",
-      size: { width: 96, height: 96 },
-      id: "large",
-    },
-    {
-      contentType: "image/png",
-      size: { width: 144, height: 144 },
-      id: "xlarge",
+      size: { width: 512, height: 512 },
     },
   ];
 };
 
-const Icon = () => {
-  return new ImageResponse(<Image src={logo} width={1000} height={1000} alt="informd.news logo" />);
+export const runtime = "edge";
+
+const Icon = ({ id }: { id: string }) => {
+  return new ImageResponse(
+    <Image src="/logo.svg" width={1000} height={1000} alt="informd.news logo" />,
+    { width: parseInt(id), height: parseInt(id) }
+  );
 };
 
 export default Icon;
