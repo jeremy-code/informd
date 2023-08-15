@@ -1,24 +1,15 @@
-import React from "react";
+import Link from "next/link";
 
-import { Article } from "@/components/Article";
-import { Navbar } from "@/components/Navbar";
-import { getData } from "@/utils";
+import { LandingNavbar } from "@/components/Navbar";
 
-const Home = async () => {
-  const { articles } = await getData("top-headlines", {
-    country: "us",
-  });
-
+const LandingPage = async () => {
   return (
     <>
-      <Navbar />
-      <main className="px-2 container mx-auto">
-        {articles.map((article) => (
-          <Article key={article.url} {...article} />
-        ))}
-      </main>
+      <LandingNavbar />
+      Landing Page
+      <Link href="/news">News</Link>
     </>
   );
 };
 
-export default Home;
+export default LandingPage;

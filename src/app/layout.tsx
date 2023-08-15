@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 
-import { Analytics } from "@/components/Misc";
+import { Analytics, AppProvider } from "@/components/Misc";
 
 import "./globals.css";
 
@@ -28,7 +28,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
     <html lang="en" className={outfit.variable}>
       <body>
         <Analytics />
-        {children}
+        <AppProvider>{children}</AppProvider>
       </body>
     </html>
   );

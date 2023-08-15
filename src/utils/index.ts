@@ -1,2 +1,2 @@
 export * from "./utils";
-export * from "./getData";
+export * from "./getNews";

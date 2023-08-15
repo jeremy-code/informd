@@ -1,16 +1,14 @@
-import { headers } from "next/headers";
-
 import { NewsResponse } from "@/types";
 
-const API_URL = "https://newsapi.org/v2/";
+const API_URL = "https://newsapi.org/v2";
+const API_KEY = process.env.NEWS_API_KEY;
 
 type Endpoint = "top-headlines" | "everything";
 
-export const getData = async (
+export const getNews = async (
   endpoint: Endpoint,
   params: Record<string, string>
 ): Promise<NewsResponse> => {
-  const API_KEY = process.env.NEWS_API_KEY;
   if (!API_KEY) throw new Error("API_KEY is not defined");
 
   const res = await fetch(`${API_URL}/${endpoint}?${new URLSearchParams(params)}`, {
