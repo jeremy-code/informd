@@ -9,14 +9,14 @@ import "./globals.css";
 const outfit = Outfit({ weight: "variable", subsets: ["latin"], variable: "--font-outfit" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://informd.news/"),
-  title: "informd",
-  description: "informd is an AI news aggregator.",
+  metadataBase: new URL("https://evolve.news/"),
+  title: "evolve",
+  description: "evolve is an AI news aggregator.",
   authors: {
     name: "Jeremy Nguyen",
     url: "https://jeremy.ng",
   },
-  publisher: "informd",
+  publisher: "evolve",
 };
 
 type RootLayoutProps = {

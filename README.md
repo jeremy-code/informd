@@ -1,14 +1,14 @@
-# informd
+# evolve-news 
 
-![GitHub Actions badge](https://github.com/jeremy-code/informd/actions/workflows/ci.yml/badge.svg)
+![GitHub Actions badge](https://github.com/jeremy-code/evolve-news/actions/workflows/ci.yml/badge.svg)
 
-Informd is an AI-powered news aggregator that helps you stay informed about the topics you care about.
+Evolve is an AI-powered news aggregator that helps you stay informed about the topics you care about.
 
 ## Installation
 
 ```bash
-git clone https://github.com/jeremy-code/informd.git
-cd informd
+git clone https://github.com/jeremy-code/evolve-news.git
+cd evolve-news
 yarn
 ```
 

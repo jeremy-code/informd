@@ -1,5 +1,5 @@
 {
-  "name": "informd",
+  "name": "evolve-news",
   "description": "AI News Aggregator",
   "version": "0.0.0",
   "private": true,
@@ -7,9 +7,9 @@
   "author": "Jeremy Nguyen <hi@jeremy.ng> (https://jeremy.ng)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jeremy-code/informd.git"
+    "url": "https://github.com/jeremy-code/evolve-news.git"
   },
-  "homepage": "https://github.com/jeremy-code/informd#readme",
+  "homepage": "https://github.com/jeremy-code/evolve-news#readme",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

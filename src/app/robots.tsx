@@ -6,7 +6,7 @@ const Robots = (): MetadataRoute.Robots => {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://informd.news/sitemap.xml",
+    sitemap: "https://evolve.news/sitemap.xml",
   };
 };
 

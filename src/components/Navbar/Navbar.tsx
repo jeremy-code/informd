@@ -38,8 +38,8 @@ const Navbar = ({ children, variant = "default", classNames, ...props }: NavbarP
     >
       {variant === "default" && (
         <NavbarBrand as={Link} href="/">
-          <Image src={logo} alt="informd logo" width={30} height={30} />
-          <span className="ml-4 text-lg font-bold">informd</span>
+          <Image src={logo} alt="evolve logo" width={30} height={30} />
+          <span className="ml-4 text-lg font-bold">evolve</span>
         </NavbarBrand>
       )}
       {children}
