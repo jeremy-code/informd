@@ -8,7 +8,7 @@ export type Article = {
   description: string;
   url: string;
   urlToImage: string;
-  publishedAt: string;
+  publishedAt: Date;
   content: string | null;
 };
 

@@ -1,27 +1,38 @@
-import Image from "next/image";
+"use client";
+
+import React, { useCallback } from "react";
+import { useRouter } from "next/navigation";
+import { Card, CardFooter, Image } from "@nextui-org/react";
 
 import type { Article as ArticleProps } from "@/types";
-import { relativeDate } from "@/utils";
+import { Timestamp } from "../Misc";
 
-const Article = (props: ArticleProps) => {
-  const { title, description, source, publishedAt, urlToImage } = props;
+const Article = ({ title, content, source, publishedAt, urlToImage }: ArticleProps) => {
+  const router = useRouter();
+
+  const handleCardPress = useCallback(() => {
+    router.push(`/news/${encodeURIComponent(title)}`);
+  }, [router, title]);
 
   return (
-    <div className="flex flex-col gap-8 md:flex-row">
-      <div>
-        <Image className="rounded-lg" src={urlToImage} width={1000} height={500} alt={title} />
-      </div>
-      <div className="self-center">
-        <p className="mb-2 text-sm text-gray-500">
+    <Card isFooterBlurred isPressable className="group h-[300px]" onPress={handleCardPress}>
+      <Image className="z-0 object-cover" src={urlToImage} alt={title} />
+      <CardFooter className="absolute bottom-0 h-28 flex-col items-start border-t-1 border-gray-700/50 bg-black/30 text-start transition-all duration-500 ease-in-out group-hover:h-full group-hover:border-t-0">
+        {/* Article Title */}
+        <h2 className="line-clamp-2 text-lg font-bold" title={title}>
+          {title}
+        </h2>
+
+        {/* Article Source and Timestamp */}
+        <p className="text-tiny text-white/60">
           {source.name} -
-          <time dateTime={publishedAt} className="ml-1">
-            {relativeDate(new Date(publishedAt))}
-          </time>
+          <Timestamp date={publishedAt} text="published" className="ml-1" />
         </p>
-        <h2 className="mb-4 text-4xl font-bold">{title}</h2>
-        <p className=" text-gray-500">{description}</p>
-      </div>
-    </div>
+
+        {/* Article Content (only shown on hover) */}
+        <p className="hidden group-hover:my-auto group-hover:block">{content}</p>
+      </CardFooter>
+    </Card>
   );
 };
 
