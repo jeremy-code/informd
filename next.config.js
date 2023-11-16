@@ -2,7 +2,6 @@
 module.exports = {
   poweredByHeader: false,
   experimental: {
-    serverActions: true,
     typedRoutes: true,
   },
   images: {
