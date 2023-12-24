@@ -1,18 +1,21 @@
 "use client";
 
 import React, { useCallback } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { Card, CardFooter, Image } from "@nextui-org/react";
+import slug from "slug";
 
 import type { Article as ArticleProps } from "@/types";
+import { createQueryString } from "@/utils";
 import { Timestamp } from "../Misc";
 
-const Article = ({ title, content, source, publishedAt, urlToImage }: ArticleProps) => {
+const Article = ({ title, content, source, publishedAt, url, urlToImage }: ArticleProps) => {
   const router = useRouter();
+  const searchParams = useSearchParams()!;
 
   const handleCardPress = useCallback(() => {
-    router.push(`/news/${encodeURIComponent(title)}`);
-  }, [router, title]);
+    router.push(`/news/${slug(title)}?${createQueryString("url", url, searchParams)}`);
+  }, [router, searchParams, title, url]);
 
   return (
     <Card isFooterBlurred isPressable className="group h-[300px]" onPress={handleCardPress}>

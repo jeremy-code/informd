@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import slug from "slug";
 
 import type { Article as ArticleProps } from "@/types";
 import { Timestamp } from "../Misc";
@@ -21,7 +23,9 @@ const FeaturedArticle = (props: ArticleProps) => {
           {source.name} -
           <Timestamp date={publishedAt} text="published" className="ml-1" />
         </p>
-        <h2 className="mb-4 text-4xl font-bold">{title}</h2>
+        <Link href={`/news/${slug(title)}`}>
+          <h2 className="mb-4 text-4xl font-bold">{title}</h2>
+        </Link>
         <p className=" text-gray-500">{description}</p>
       </div>
     </div>
